@@ -1,4 +1,4 @@
-Python toy codes for aSPU
+Python codes for aSPU
 =========================
 
 IL-YOUP KWAK <kwaki@umn.edu>
