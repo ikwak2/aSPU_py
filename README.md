@@ -1,4 +1,4 @@
-Python codes for aSPU
+Python codes for MTaSPUsSet
 =========================
 
 IL-YOUP KWAK <kwaki@umn.edu>
@@ -26,6 +26,6 @@ Here's a description of the files:
 
 How to execute :
 ```py
-./MTaSPUsSet.py Zs.txt corPhe.txt corSNP.txt 1000
+./MTaSPUsSet.py Zs.txt corPhe.txt corSNP.txt 1000 out.txt
 ```
 

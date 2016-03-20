@@ -13,6 +13,11 @@ print nperm
 
 pow1 = np.array([1,2,4,8])
 pow2 = np.array([1,2,4,8])
+
+#Zs = np.loadtxt("Zs.txt")
+#corPhe = np.loadtxt("corPhe.txt")
+#corSNP = np.loadtxt("corSNP.txt")
+nperm = int(sys.argv[4])
 #nperm = 10
 
 #print Zs
@@ -32,7 +37,7 @@ ev_V, evec_V = eig(V)
 ev_V[ ev_V < 0] = 0
 B = np.dot(np.dot(evec_V, np.diag(np.sqrt(ev_V))) , evec_V.T)
 
-Ts = np.array([0 for i in range(len(pow1)*len(pow2))], dtype = "float64")
+Ts = np.array([0 for i in range(len(pow1)*len(pow2))], dtype = "float32")
 for p1 in range(len(pow1)) :
     for p2 in range(len(pow2)) :
         Zs2 = Zs**pow1[p1]
@@ -40,8 +45,8 @@ for p1 in range(len(pow1)) :
         Ts[p2 + p1*len(pow2)] = Zs3.sum()
 
         
-pPerm0 = np.array( [0 for i in range(len(pow1)*len(pow2))], dtype = "float16")
-T0s = np.array( [0 for i in range(nperm)], dtype = "float64")
+pPerm0 = np.array( [0 for i in range(len(pow1)*len(pow2))], dtype = "float32")
+T0s = np.array( [0 for i in range(nperm)], dtype = "float32")
 
 for p1 in range(len(pow1)) :
     for p2 in range(len(pow2)) :
@@ -67,5 +72,13 @@ Paspu =  (sum(minp0 <= pPerm0.min()) + 1) / float(nperm+1)
 print "MTSPUsSets : " + str(pPerm0)
 print "MTaSPUsSet : " + str(Paspu)
 
+
+Zs0 = np.zeros( (nphe,nsnp) )
+for t in range(nphe) :
+    Zs0[t,] = np.random.normal(0, 1, nsnp)
+Z0 = np.dot(np.dot(A,Zs0), B).T
+Z02 = Z0**pow1[p1]
+Z03 = Z02.sum(axis = 0)**pow2[p2]
+            
 
 
