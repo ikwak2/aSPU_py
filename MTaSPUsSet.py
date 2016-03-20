@@ -8,10 +8,12 @@ from util import rankdata
 Zs = np.loadtxt(sys.argv[1])
 corPhe = np.loadtxt(sys.argv[2])
 corSNP = np.loadtxt(sys.argv[3])
+nperm = int(sys.argv[4])
+print nperm
 
 pow1 = np.array([1,2,4,8])
 pow2 = np.array([1,2,4,8])
-nperm = 10
+#nperm = 10
 
 #print Zs
 #print corPhe
