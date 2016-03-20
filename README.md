@@ -11,7 +11,7 @@ Here's a description of the files:
 
 ---
 
-[`MTaSPUsSet.py`] - MTaSPUsSet test using python. Need four arguments, Z-score matrix (Zs.txt), correlation matrix among phenotypes (corPhe.txt), correlation matrix among SNPs (corSNP.txt) and the number of permutations ( 1000 )
+[`MTaSPUsSet.py`] - MTaSPUsSet test using python. Need five arguments, Z-score matrix (Zs.txt), correlation matrix among phenotypes (corPhe.txt), correlation matrix among SNPs (corSNP.txt), the number of permutations ( 1000 ) and the file name where result outputs to be saved (out.txt).
 
 [`util.py`] - some useful python functions used in MTaSPUsSet.py.
 
