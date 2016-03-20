@@ -72,9 +72,12 @@ Paspu =  (sum(minp0 <= pPerm0.min()) + 1) / float(nperm+1)
 
 
 f = open(fname, "w")
-f.write("MTSPUsSets : " + str(pPerm0))
-f.write("\n")
-f.write("MTSPUsSets : " + str(Paspu))
+for item in pPerm0 :
+    f.write("%s\n" % str(item))
+    f.write("%s" % str(Paspu))
+#f.write("MTSPUsSets : " + str(pPerm0))
+#f.write("\n")
+#f.write("MTSPUsSets : " + str(Paspu))
 f.close()
 
 print "MTSPUsSets : " + str(pPerm0)
