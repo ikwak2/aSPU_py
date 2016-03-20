@@ -26,6 +26,7 @@ Here's a description of the files:
 
 How to execute :
 ```py
-./MTaSPUsSet.py Zs.txt corPhe.txt corSNP.txt 1000 out.txt
+./MTaSPUsSet.py Zs.txt corPhe.txt corSNP.txt 1000 out.txt 
 ```
 
+Results (MTSPUsSet and MTaSPUsSet p-values) are saved in `out.txt`

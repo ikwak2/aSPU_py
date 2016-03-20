@@ -9,7 +9,8 @@ Zs = np.loadtxt(sys.argv[1])
 corPhe = np.loadtxt(sys.argv[2])
 corSNP = np.loadtxt(sys.argv[3])
 nperm = int(sys.argv[4])
-print nperm
+fname = sys.argv[5]
+#print nperm
 
 pow1 = np.array([1,2,4,8])
 pow2 = np.array([1,2,4,8])
@@ -69,16 +70,15 @@ for p1 in range(len(pow1)) :
 
 Paspu =  (sum(minp0 <= pPerm0.min()) + 1) / float(nperm+1)
 
+
+f = open(fname, "w")
+f.write("MTSPUsSets : " + str(pPerm0))
+f.write("\n")
+f.write("MTSPUsSets : " + str(Paspu))
+f.close()
+
 print "MTSPUsSets : " + str(pPerm0)
 print "MTaSPUsSet : " + str(Paspu)
 
-
-Zs0 = np.zeros( (nphe,nsnp) )
-for t in range(nphe) :
-    Zs0[t,] = np.random.normal(0, 1, nsnp)
-Z0 = np.dot(np.dot(A,Zs0), B).T
-Z02 = Z0**pow1[p1]
-Z03 = Z02.sum(axis = 0)**pow2[p2]
-            
 
 
