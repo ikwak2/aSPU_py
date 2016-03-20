@@ -13,7 +13,7 @@ Here's a description of the files:
 
 [`MTaSPUsSet.py`] - MTaSPUsSet test using python. 
 
-[`util.py`] - some useful python codes for coding MTaSPUsSet test.
+[`util.py`] - some useful python functions used in MTaSPUsSet.py.
 
 ---
 
