@@ -1,7 +1,7 @@
 Python code for MTaSPUsSet
 =========================
 
-IL-YOUP KWAK <kwaki@umn.edu>
+IL-YOUP KWAK <ikwak@umn.edu>
 
 python code for MTaSPUsSet (Multiple-trait, gene-level adaptive association testing
   with GWAS summary statistics) test.
